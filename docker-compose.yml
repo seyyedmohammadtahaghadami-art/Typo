@@ -1,0 +1,10 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      MAX_UPLOAD_MB: "75"
+      CORS_ORIGINS: "*"
+    volumes:
+      - ./backend/data:/app/data
